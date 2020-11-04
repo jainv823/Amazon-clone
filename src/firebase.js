@@ -1,5 +1,6 @@
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// eslint-disable-next-line no-unused-vars
+import firebase from "firebase";
+
 const firebaseConfig = {
   apiKey: "AIzaSyCUNcA_oAcVlJvybXdM9bGo2RjSgI_PIa8",
   authDomain: "clone-5fa05.firebaseapp.com",
@@ -10,3 +11,9 @@ const firebaseConfig = {
   appId: "1:765535331764:web:12f1271ee530024c61bee1",
   measurementId: "G-M6P0NHKK8F",
 };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export {db, auth}
